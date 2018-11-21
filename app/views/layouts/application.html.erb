@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsStudy</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if flash[:notice] %>
+      <div class="alert alert-info"><p><%= flash[:notice] %></p></div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="alert alert-danger"><p><%= flash[:alert] %></p></div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
